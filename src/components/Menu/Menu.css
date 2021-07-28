@@ -1,45 +1,85 @@
-.nav-menu {
-	display: inline-block;
-	float: right;
-}
+.bm-item {
+	/* display: inline-block; */
+  
+	/* Nuestro estilo de elemento de la barra lateral */
+	text-decoration: none;
+	/* margin-bottom: 10px; */
+	/* color: #d1d1d1; */
+	/* transition: color 0.2s; */
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+	display: block;
+	padding: 10px 20px;
+	margin: 20px 0;
+	color: #EBE8B3;
+	font-weight: bold;
+	transition: .5s;
+  }
+  
+  .bm-item:hover {
+    background: #EBE8B3;
+    color: #000;
+  }
+  
+  .bm-burger-button {
+    position: relative;
+    width: 33px;
+    height: 30px;
+    right: 36px;
+    top: 15px;
+  }
+  
+  /* Color / forma de las barras de iconos de hamburguesas */
+  .bm-burger-bars {
+	  background: #EBE8B3;
+  }
+  
+  /* Posición y tamaño del botón de cruz en el que se puede hacer clic */
+  .bm-cross-button {
+    height: 24px;
+    width: 24px;
+  }
+  
+  /* Color / forma de la cruz del botón de cierre */
+  .bm-cross {
+	  background: #bdc3c7;
+  }
+  
+  /* Estilos generales de la barra lateral */
+  .bm-menu {
+    background: #000;
+    padding: 2.5em 1.5em 0;
+    font-size: 1em;
+    width: 100%;
+  }
 
-.nav-menu ul {
-	list-style: none;
-}
+  .bm-menu-wrap {
+    width: 280px;
+  } 
+  
+  /* Morph forma necesaria con burbuja o elástico */
+  .bm-morph-shape {
+	  fill: #373a47;
+  }
+  
+  /* Envoltorio para lista de artículos */
+  .bm-item-list {
+	  color: #000;
+  }
+  
+  /* Estilo de superposición */
+  .bm-overlay {
+	  background: rgba(0, 0, 0, 0.3);
+  }
+  
 
-.nav-menu ul li {
-	display: inline;
-}
+  @media (min-width: 992px) {
 
-.nav-menu ul li a {
-	display: inline-block;
-	padding: 40px 10px 5px;
-	text-transform: uppercase;
-	margin-right: 30px;
-	font-size: 14px;
-	color: #fff;
-	font-weight: 500;
-	position: relative;
-}
+    
+    .bm-burger-bars {
+      display: none;
+    }
 
-.nav-menu ul li a:after {
-	position: absolute;
-	content: "";
-	width: 2px;
-	height: 0;
-	left: 50%;
-	margin-left: 1px;
-	top: 0;
-	background: #baff00;
-	-webkit-transition: all 0.4s;
-	-o-transition: all 0.4s;
-	transition: all 0.4s;
-}
-
-.nav-menu ul li a:hover:after {
-	height: 25px;
-}
-
-.nav-menu ul li.active>a:after {
-	height: 25px;
-}
+    
+  }

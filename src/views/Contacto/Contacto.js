@@ -2,49 +2,93 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import './Contacto.css';
 
+import location from '../../assets/location.png';
+import mail from '../../assets/mail.png';
+import call from '../../assets/call.png';
+
+//Redes
+import facebook from '../../assets/facebook.png';
+import instagram from '../../assets/instagram.png';
+import link from '../../assets/link.png';
+
 const Contacto = () => (
+  
     <>
 	<Helmet>
 		<title>Contacto | CheCat | Developers</title>
 		<meta name="description" content="Contacto | Sitio web de desarrollo web y apps" data-react-helmet="true" />
 	</Helmet>
 
-    <section className="page-header-section set-bg" data-setbg="img/header-bg-2.jpg">
-		<div className="container">
-			<h1 className="header-title">Contact<span>.</span></h1>
-		</div>
-	</section>
+    <div className="contactoContainer" >
+      <div className="containerCon">
+        <div className="contactinfo">
+          <div>
+            <h2>Contacto</h2>
+            <ul className="info">
+              <li>
+                <span><img src={location} alt="" /></span>
+                <span>Av. Lisandro de la Torre 2061 <br/>
+                    Comodoro Rivadavia, Chubut <br/>
+                  C.P. 9000</span>
+              </li>
+              <li>
+                <span><img src={mail} alt="" /></span>
+                <span>checat@gmail.com</span>
+              </li>
+              <li>
+                <span><img src={call} alt="" /></span>
+                <span>297-514-4422 <br />
+                11-344-71537</span>
+              </li>
+            </ul>
+          </div>
+          <ul className="sci">
+            <li><a href=""><img src={facebook} alt="" /></a></li>
+            <li><a href=""><img src={instagram} alt="" /></a></li>
+            <li><a href=""><img src={link} alt="" /></a></li>
+            {/* <li><a href=""><img src="4.png" /></a></li>
+            <li><a href=""><img src="5.png" /></a></li> */}
+          </ul>
 
 
-    <section className="page-section pt100">
-		<div className="container pb100">
-			<div className="section-title pt-5">
-				<h1>Get in touch</h1>
-			</div>
-			<div className="row">
-				<div className="col-lg-3 contact-info mb-5 mb-lg-0">
-					<p>Address: 1481 Creekside Lane Avila Beach, CA 93424 </p>
-					<p>Phone: +53 345 7953 32453</p>
-					<p>Email: yourmail@gmail.com</p>
-					<div className="cf-social">
-						<a href="#"><i class="fa fa-google-plus"></i></a>
-						<a href="#"><i class="fa fa-pinterest"></i></a>
-						<a href="#"><i class="fa fa-facebook"></i></a>
-						<a href="#"><i class="fa fa-twitter"></i></a>
-					</div>
-				</div>
-				<div className="col-lg-9">
-					<form className="contact-form">
-						<input type="text" placeholder="Enter your name" />
-						<input type="text" placeholder="Enter your email address" />
-						<textarea placeholder="Message ..."></textarea>
-						<button className="site-btn sb-dark">Send</button>
-					</form>
-				</div>
-			</div>
-		</div>
-		<div className="map-area" id="map-canvas"></div>
-	</section>
+        </div>
+        <div className="contactForm">
+          <h2>Envianos tu mensaje</h2>
+          <div className="formBox">
+
+            <div className="inputBox w50">
+              <input type="text" required />
+              <span>Nombre</span>
+            </div>
+
+            <div className="inputBox w50">
+              <input type="text" required />
+              <span>Apellido</span>
+            </div>
+
+            <div className="inputBox w50">
+              <input type="email" required />
+              <span>Email</span>
+            </div>
+
+            <div className="inputBox w50">
+              <input type="text" required />
+              <span>Telefono de contacto</span>
+            </div>
+
+            <div className="inputBox w100">
+              <textarea required></textarea>
+              <span>Escriba su mensaje aqui...</span>
+            </div>
+
+            <div className="inputBox w100">
+              <input type="submit" value="Enviar" />
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
 
     
 

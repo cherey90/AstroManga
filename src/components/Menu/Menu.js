@@ -1,20 +1,24 @@
-import React from 'react';
+import React, { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { bubble as Menu } from 'react-burger-menu';
+import logoMenu from '../../assets/Checat.png';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faBars } from '@fortawesome/free-solid-svg-icons';
+
 import './Menu.css';
 
-const Menu = () => {
-
+export default props => {
 	return (
-		
-		<nav className="nav-menu">
-			<ul>
-				<li className="active"><Link to="/">Home</Link></li>
-				<li><Link to="/Acerca">Acerca</Link></li>
-				<li><Link to="/Servicios">Servicios</Link></li>
-				<li><Link to="/Contacto">Contacto</Link></li>
-			</ul>
-		</nav>
+	  // Pass on our props
+	  <Menu right {...props}>
+		  <a className="logo-movil">
+				<img src={logoMenu} alt="" />
+			</a>
+		<Link  class="menu-item" to="/">Home</Link>
+		<Link  class="menu-item" to="/Acerca">Acerca</Link>
+		<Link  class="menu-item" to="/Servicios">Servicios</Link>
+		<Link  class="menu-item" to="/Contacto">Contacto</Link>
+	  </Menu>
 	);
-}
+  };
 
-export default Menu;

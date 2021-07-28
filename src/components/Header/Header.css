@@ -1,39 +1,62 @@
 /*----------------------------------------*/
 /*  Header CSS
 /*----------------------------------------*/
-.header-area {
-	position: absolute;
+header {
+	display: flex;
+	padding: 3px 10px;
+	justify-content: space-between;
 	width: 100%;
-	top: 0;
-	z-index: 50;
+	height: 60px;
+	box-sizing: border-box;
+	background: rgb(0, 0, 0);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+	transition: .5s;
 }
 
-.logo-area {
-	float: left;
-	display: inline-block;
-	background: #121212;
-	padding: 20px 60px 30px;
-	width: 100px;
-	height: 100px;
-}
-
-.logo-area img {
-	width: 100px;
-	height: 100px;
-}
-
-.phone-number {
-	float: right;
-	display: inline-block;
-	padding: 5px 10px;
-	background: #baff00;
-	font-weight: 700;
-	letter-spacing: 1px;
-	margin-top: 30px;
-	margin-right: 50px;
-}
-
-.nav-switch {
+.logo-desktop {
 	display: none;
 }
 
+.logo-movil img {
+	width: 60px;
+}
+
+@media (min-width: 768px) {
+
+	header {
+		height: 65px;
+	}
+}
+
+@media (min-width: 992px) {
+
+	header {
+		height: 80px;
+	}
+
+	.logo-movil {
+		display: none;
+	}
+
+	.logo-desktop {
+		display: flex;
+	}
+
+	.logo-desktop img {
+		width: 80px;
+		height: 70px;
+	}
+
+}
+
+@media (min-width: 1024px) {
+
+	header {
+		height: 90px;
+		justify-content: space-around;
+	}
+
+	.logo-desktop img {
+		height: 80px;
+	}
+}
