@@ -1,2 +1,2 @@
-# CheCat
-Sitio Web sobre desarrollo de tecnologías
+# AstroManga
+Sitio Web sobre tiendas de mangas
